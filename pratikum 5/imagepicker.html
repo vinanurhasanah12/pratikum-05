@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IMAGE PICKER</title>
+</head>
+<script>
+        
+        
+        
+	function klik(){       
+		
+		
+		let pilih_binatang = document.getElementById("binatang");
+		alert("Ini Gambar " + pilih_binatang.value);
+		let pi = pilih_binatang.selectedIndex;
+		console.log("binatang pilihan anda :" + pilih_binatang[pi].value);
+		
+
+		let ambil_gambar = document.getElementById("hutan");
+		ambil_gambar.src="IMAGE/"+pilih_binatang[pi].value+".jpeg";
+		
+		
+	}
+</script>
+<body background="image/bg3.jpeg">
+
+	<form id="from1">
+        <select id="binatang" onchange="klik()" >
+        <option value="img5">unyu</option>
+        <option value="img2">anime</option>
+        <option value="img4">unicorn</option>
+		<option value="img3">lucu</option>
+		<option value="img1">imut</option>
+        </select>
+    </form>
+    <img src="IMAGE/img1.jpeg" alt="zebra" id="hutan">
+
+</body>
+
+</html>

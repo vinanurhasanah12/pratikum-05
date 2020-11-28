@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Chat</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable= 0">
+        <link href="csseksternal.css" rel="stylesheet" type="text/css">
+    </head>
+    <body background="IMAGE/uni.jpeg">
+        
+
+        <input type="text" placeholder="type something..." id="typing_message_box">
+
+        <button id="send-button" onclick="send_text();">Send</button>
+        
+        <script>
+            function send_text() 
+            {
+     var x = document.getElementById("typing_message_box").value; /* gets the textbox VALUE */
+    var elem = document.createElement('div'); /* creates new div element */
+
+var text = document.createTextNode(x); /* creates the text to put into the element */
+    elem.appendChild(text); /* adds the text to the element */
+    elem.className = 'receiver-container'; /* adds the class to the element */
+    document.body.appendChild(elem); /* adds element to the body */
+    document.getElementById('typing_message_box').value = ""; document.getElementById('typing_message_box').focus();
+}
+        </script>
+        
+    
+    </body>
+</html>
